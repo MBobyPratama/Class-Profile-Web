@@ -1,11 +1,9 @@
-// Sample data from data_mahasiswa.csv
 const students = [
   { NIM: '2310512056' },
   { NIM: '234567' },
   { NIM: '345678' }
 ];
 
-// Function to check login
 function login() {
   const nimInput = document.querySelector('input[type="text"]').value;
   const passwordInput = document.querySelector('input[type="password"]').value;
@@ -20,13 +18,11 @@ function login() {
   }
 }
 
-// Function to handle logout
 function logout() {
   localStorage.removeItem('isLoggedIn');
   window.location.href = 'login.html';
 }
 
-// Function to update navbar based on login state
 function updateNavbar() {
   const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
   const navbar = document.querySelector('.navbar');
@@ -56,5 +52,4 @@ function updateNavbar() {
   }
 }
 
-// Call updateNavbar on page load
 document.addEventListener('DOMContentLoaded', updateNavbar);
