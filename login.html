@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
+
 <body>
   <header>
+    <img class="logo" src="/images/Logo.png">
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="berita_kelas.html">Berita Kelas</a>
@@ -37,10 +41,12 @@
     <div class="contact">
       <p>Contact Us</p>
       <div class="contact-info">
-        <a href="https://www.instagram.com/sisforbrilliance_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+        <a
+          href="https://www.instagram.com/sisforbrilliance_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
           <img src="./images/Instagram.png" alt="Instagram" width="24" height="24">
         </a>
-        <a href="https://www.instagram.com/sisforbrilliance_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">sisforbrilliance_</a>
+        <a
+          href="https://www.instagram.com/sisforbrilliance_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">sisforbrilliance_</a>
         <a href="mailto:kelasbpintardancemerlang@gmail.com">
           <img src="./images/Mail.png" alt="Email" width="24" height="24">
         </a>
@@ -48,5 +54,12 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.querySelector('.btn').addEventListener('click', function (event) {
+      event.preventDefault();
+      login();
+    });
+  </script>
 </body>
+
 </html>

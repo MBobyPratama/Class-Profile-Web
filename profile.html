@@ -18,24 +18,17 @@
       <a href="mata_kuliah.html">Mata Kuliah</a>
       <a href="jadwal_kuliah.html">Jadwal Kuliah</a>
       <a href="anggota.html">Anggota</a>
-      <a href="login.html" class="btn-login-link">
-        <button class="btn-login">Login</button>
+      <a href="profile.html" class="profile-link">
+        <img src="/images/Profile.png" alt="Profile" class="profile-icon">
       </a>
     </nav>
   </header>
 
-  <main>
-    <section class="about">
-      <h1>About Us</h1>
-      <h2>Console.log(“Selamat Datang di Website Kelas B S1 Sistem Informasi UPN Veteran Jakarta”);</h2>
-      <p>Kelas B S1 Sistem Informasi UPNVJ terdiri dari 40 mahasiswa dengan semangat untuk terus berkembang di dunia
-        teknologi informasi. Visi kami adalah menjadi kelas terdepan dalam penerapan teknologi untuk masyarakat. Misi
-        kami adalah membangun lingkungan belajar yang kolaboratif dan inovatif.</p>
-      <div class="image-placeholder">
-        <p>Gambar</p>
-      </div>
-    </section>
-  </main>
+  <div class="wrapper">
+    <h2>Name: [Your Name]</h2>
+    <p>NIM: [Your NIM]</p>
+    <button class="btn-logout">Logout</button>
+  </div>
 
   <footer>
     <div class="contact">
@@ -54,6 +47,12 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.querySelector('.btn-logout').addEventListener('click', function (event) {
+      event.preventDefault();
+      logout();
+    });
+  </script>
 </body>
 
 </html>
