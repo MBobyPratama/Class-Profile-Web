@@ -4,30 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Kelas B</title>
+  <title>Profile</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      if (!isLoggedIn) {
+        window.location.href = 'login.html';
+      } else {
+        const name = localStorage.getItem('name');
+        const nim = localStorage.getItem('nim');
+
+        document.getElementById('name').textContent = name;
+        document.getElementById('nim').textContent = nim;
+      }
+    });
+  </script>
 </head>
 
 <body>
   <header>
     <img class="logo" src="/images/Logo.png">
     <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="berita_kelas.html">Berita Kelas</a>
-      <a href="mata_kuliah.html">Mata Kuliah</a>
-      <a href="jadwal_kuliah.html">Jadwal Kuliah</a>
-      <a href="anggota.html">Anggota</a>
-      <a href="profile.html" class="profile-link">
-        <img src="/images/Profile.png" alt="Profile" class="profile-icon">
-      </a>
     </nav>
   </header>
 
   <div class="wrapper">
-    <h2>Name: [Your Name]</h2>
-    <p>NIM: [Your NIM]</p>
-    <button class="btn-logout">Logout</button>
+    <h2><span id="name">[Your Name]</span></h2>
+    <p>NIM : <span id="nim">[Your NIM]</span></p>
+    <button class="btn-logout" onclick="logout()">Logout</button>
   </div>
 
   <footer>
@@ -47,12 +53,6 @@
       </div>
     </div>
   </footer>
-  <script>
-    document.querySelector('.btn-logout').addEventListener('click', function (event) {
-      event.preventDefault();
-      logout();
-    });
-  </script>
 </body>
 
 </html>
